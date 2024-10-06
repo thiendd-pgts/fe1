@@ -1,7 +1,19 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-
+import Nabar from "./component/Nabar";
+import Hero from "./component/Hero/Hero";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import "aos/dist/aos.css";
+import Products from "./component/Product/Products";
+import TopProducts from "./component/TopProducts/TopProducts";
+import Banner from "./component/Banner/Banner";
+import Subcribe from "./component/Subcribe/Subcribe";
+import Testimonails from "./component/Testimonails/Testimonails";
+import Footer from "./component/Footer/Footer";
+// import AOS from "aos";
+// import { useEffect } from "react";
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -28,6 +40,14 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <Nabar />
+        <Hero />
+        <Products />
+        <TopProducts />
+        <Banner />
+        <Subcribe />
+        <Testimonails />
+        <Footer />
         {children}
       </body>
     </html>
